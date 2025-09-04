@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+"scripts": {
+  "start": "ts-node -r dotenv/config src/callBack/callbackVersion.ts",
+  "build": "tsc"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DIMPHO290/async-weather-news-dashboard.git"
@@ -20,6 +21,8 @@
   "homepage": "https://github.com/DIMPHO290/async-weather-news-dashboard#readme",
   "dependencies": {
     "@types/node": "^24.3.0",
+    "axios": "^1.11.0",
+    "dotenv": "^17.2.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2"
   },
