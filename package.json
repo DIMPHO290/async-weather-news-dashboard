@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
 "scripts": {
-  "start": "ts-node -r dotenv/config src/callBack/callbackVersion.ts",
+ 
+   "start:callback": "ts-node -r dotenv/config src/callBack/callbackVersion.ts",
+  "start:promise": "ts-node -r dotenv/config src/promiseVersion/promiseVersion.ts",
   "build": "tsc"
 },
   "repository": {
