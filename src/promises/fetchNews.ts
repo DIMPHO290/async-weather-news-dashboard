@@ -1,7 +1,8 @@
 import https from "https";
-import { WeatherData } from "../CallBack/type/weatherData";
+import { NewsData } from "../CallBack/type/weatherData";
 
-export function fetchNews(apiKey: string): Promise<WeatherData[]> {
+
+export function fetchNews(apiKey: string): Promise<NewsData[]> {
   return new Promise((resolve, reject) => {
     const url = `https://api.mediastack.com/v1/news?access_key=${apiKey}&countries=za&limit=5`;
 
@@ -20,17 +21,17 @@ export function fetchNews(apiKey: string): Promise<WeatherData[]> {
               );
             }
 
-            const articles: WeatherData[] = json.data.map((a: any) => ({
+            const articles: NewsData[] = json.data.map((a: any) => ({
               title: a.title,
               description: a.description,
             }));
 
-            resolve(articles);
+            resolve(articles); 
           } catch (error) {
-            reject(error);
+            reject(error); 
           }
         });
       })
-      .on("error", (err: Error) => reject(err));
+      .on("error", (err: Error) => reject(err)); 
   });
 }
