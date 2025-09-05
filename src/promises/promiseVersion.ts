@@ -8,7 +8,7 @@ const newsApiKey = process.env.VITE_NEWS_API_KEY as string;
 fetchWeather(weatherApiKey, "Polokwane")
   .then((weather) => {
     console.log("City:", weather.name);
-    console.log("Temperature:", weather.temp, "°C");
+    console.log("Temperature:", Math.round(weather.temp), "°C");
     console.log("Weather:", weather.description);
 
     return fetchNews(newsApiKey);

@@ -1,4 +1,5 @@
-import { WeatherData } from "../callBack/type/weatherData";
+// import { WeatherData } from "../callBack/type/weatherData";
+import { WeatherData } from "../CallBack/type/weatherData";
 
 export async function fetchWeather(
   apiKey: string,
